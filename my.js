@@ -232,3 +232,64 @@ if (per >= 90 && per < 100) {
     document.write("<h2>Answer: You Fail Grade F</h2>");
 }
 document.write("</br>");
+
+
+// 13.Write a js program to input the basic salary of an employee and calculate its Gross salary according to the following:
+// Basic Salary <= 10000 : HRA = 20%, DA = 80%
+// Basic Salary <= 20000 : HRA = 25%, DA = 90%
+// Basic Salary > 20000 : HRA = 30%, DA = 95%
+
+document.write("<h2>13.Write a js program to input the basic salary of an employee and calculate its Gross salary according to the following:</h2>");
+document.write("<h2>Basic Salary <= 10000 : HRA = 20%, DA = 80%</h2>");
+document.write("<h2>Basic Salary <= 20000 : HRA = 25%, DA = 90%</h2>");
+document.write("<h2>Basic Salary > 20000 : HRA = 30%, DA = 95%</h2>");
+
+
+document.write("</br>");
+
+// 14.Write a js program to input electricity unit charges and calculate total
+// electricity bill according to the given condition:
+// For the first 50 units Rs. 0.50/unit
+// For the next 100 units Rs. 0.75/unit
+// For the next 100 units Rs. 1.20/unit
+// For units above 250 Rs. 1.50/unit
+// An additional surcharge of 20% is added to the bill
+
+document.write("<h2>14.Write a js program to input electricity unit charges and calculate total electricity bill according to the given condition:</h2>");
+document.write("<h2>For the first 50 units Rs. 0.50/unit</h2>");
+document.write("<h2>For the next 100 units Rs. 0.75/unit</h2>");
+document.write("<h2>For the next 100 units Rs. 1.20/unit</h2>");
+document.write("<h2>For units above 250 Rs. 1.50/unit</h2>");
+document.write("<h2>An additional surcharge of 20% is added to the bill</h2>");
+
+let unit = 170;
+let rate50 = 0.50;
+let rate150 = 0.75;
+let rate250 = 1.20;
+let rateHigh = 1.50;
+let taxRatio = 20/100;
+if (unit > 0 && unit <= 50) {
+    let unitsAmount = unit * rate50;
+    let taxAmount = unitsAmount * taxRatio;
+    let netAmount = unitsAmount + taxAmount;
+    document.write("<h2>Answer: Net Amount of Bill is " + netAmount + " Rupees.</h2>");
+}else if (unit > 50 && unit <= 150) {
+    let unitsAmount = unit * rate150;
+    let taxAmount = unitsAmount * taxRatio;
+    let netAmount = unitsAmount + taxAmount;
+    document.write("<h2>Answer: Net Amount of Bill is " + netAmount + " Rupees.</h2>");
+}else if (unit > 150 && unit <= 250) {
+    let unitsAmount = unit * rate250;
+    let taxAmount = unitsAmount * taxRatio;
+    let netAmount = unitsAmount + taxAmount;
+    document.write("<h2>Answer: Net Amount of Bill is " + netAmount + " Rupees.</h2>");
+}else if (unit > 250) {
+    let unitsAmount = unit * rateHigh;
+    let taxAmount = unitsAmount * taxRatio;
+    let netAmount = unitsAmount + taxAmount;
+    document.write("<h2>Answer: Net Amount of Bill is " + netAmount + " Rupees.</h2>");
+}else{
+    document.write("Please Enter Units from 1 to Above.");
+}
+
+document.write("</br>");
